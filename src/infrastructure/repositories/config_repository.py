@@ -4,7 +4,20 @@ from threading import Lock
 
 
 class ConfigRepository(IConfigRepository):
+    """Implement the config repository using an INI file.
+
+    This repository provides operations to read, update, and persist
+    configuration settings stored in an INI file. It uses a thread lock
+    to synchronize access to the configuration parser and preserves the
+    case of option names.
+    """
     def __init__(self, path: str = 'config.ini'):
+        """Initialize the config repository.
+
+        Args:
+            path (str): Path to the INI configuration file. Defaults to
+                'config.ini'.
+        """
         self.path = path
         self.config = RawConfigParser()
         self._lock = Lock()
