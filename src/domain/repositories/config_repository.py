@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class ConfigRepository(ABC):
+class IConfigRepository(ABC):
     """Define the interface for managing application configuration settings.
 
     This repository provides operations to set, retrieve, and persist

@@ -1,6 +1,6 @@
-from .config_repository import ConfigRepository
+from .config_repository import IConfigRepository
 
 
 __all__ = [
-    'ConfigRepository',
+    'IConfigRepository',
 ]
