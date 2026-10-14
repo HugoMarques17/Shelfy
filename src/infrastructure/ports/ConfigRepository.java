@@ -1,4 +1,4 @@
-package infrastructure;
+package infrastructure.ports;
 
 import domain.ports.IConfigRepository;
 
